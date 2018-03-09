@@ -2,7 +2,7 @@
 h1, h2, h3, h4, h5 {
 	font-family: 'Georgia', Times, Times New Roman, serif;
 	margin: 20px;
-	color: #3f5c94;
+	color: #333;
 }
 
 h2 {
@@ -28,4 +28,42 @@ body {
 
 .container {
     padding-top: 20px;
+}
+
+.jumbotron {
+    background-color: #edf5fa;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.jumbotron h1{
+    text-align: center;
+    color: #036;
+    font-family: 'Coiny', cursive;
+}
+
+.instructions {
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.gameboard {
+    background-color: #f6f6f6;
+}
+
+.crystal {
+    padding: 10px 10px 10px;
+    max-width: 20%;
+}
+
+.boulder {
+    margin-bottom: -200px;
+    margin-top: -100px;
+}
+
+.lowpadding {
+    padding-left: 2px;
+    padding-right: 2px;
+    width: 50%;
+    float: left;
 }
