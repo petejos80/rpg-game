@@ -3,9 +3,11 @@ $(document).ready(function(){
 
 // VARIABLES
 // =======================================================================================================
-var targetNumber = getRandomArbitrary(20, 100);
+var targetNumber = getRandomArbitrary(19, 120);
 var crystalNumberOptions = [10, 5, 3, 7]; 
 var counter = 0; 
+var totalWins = 0;
+var totalLosses = 0;
 
 // FUNCTIONS 
 // =======================================================================================================
@@ -14,8 +16,12 @@ function getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
   }
 
-function addToScore() {
-
+// Reset game to initial conditions
+function newGame () {
+    targetNumber = getRandomArbitrary(19, 120);
+    $('#numberToGuess').text(targetNumber);
+    counter = 0;
+    $('#yourScore').text(counter);
 }
 
 // MAIN PROCESS 
@@ -68,6 +74,18 @@ $('#crystal2').on('click', function() {
 $('#crystal3').on('click', function() {
     counter += crystalValue3;
     $('#yourScore').text(counter);
+    
+    if (counter === targetNumber) {
+        alert("You win!");
+        newGame();
+      }
+  
+      else if (counter >= targetNumber) {
+        alert("You lose!!");
+        newGame();
+      }
+    
+    
 });
 
 $('#crystal4').on('click', function() {
