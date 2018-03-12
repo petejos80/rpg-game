@@ -28,20 +28,18 @@ function newGame () {
 function winCheck () {
 if (counter === targetNumber) {
     $('#statusMessage').text("You are a winner!");
-    counter = 0;
-    $('#yourScore').text(counter);
     totalWins++;
     $("#yourWins").text(totalWins);
     console.log(totalWins);
+    newGame();
   }
 
   else if (counter >= targetNumber) {
     $('#statusMessage').text("You are a loser!");
-    counter = 0;
-    $('#yourScore').text(counter);
     totalLosses++;
     $("#yourLosses").text(totalLosses);
     console.log(totalLosses);
+    newGame();
   }
 };
 
