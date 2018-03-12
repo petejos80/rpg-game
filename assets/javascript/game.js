@@ -64,33 +64,68 @@ console.log(crystalValue4 + ' is Cystal 4"s Value');
 $('#crystal1').on('click', function() {
     counter += crystalValue1;
     $('#yourScore').text(counter);
-});
 
-$('#crystal2').on('click', function() {
-    counter += crystalValue2;
-    $('#yourScore').text(counter);
-});
-
-$('#crystal3').on('click', function() {
-    counter += crystalValue3;
-    $('#yourScore').text(counter);
-    
+// Display message based on win or loss
     if (counter === targetNumber) {
-        alert("You win!");
+        $('#statusMessage').text(' You are a winner!');
         newGame();
       }
   
       else if (counter >= targetNumber) {
-        alert("You lose!!");
+        $('#statusMessage').text("You are a loser!");
         newGame();
       }
-    
-    
 });
 
+// Configured crystals to increase total counter value when clicked
+$('#crystal2').on('click', function() {
+    counter += crystalValue2;
+    $('#yourScore').text(counter);
+
+// Display message based on win or loss
+    if (counter === targetNumber) {
+        $('#statusMessage').text(' You are a winner!');
+        newGame();
+      }
+  
+      else if (counter >= targetNumber) {
+        $('#statusMessage').text("You are a loser!");
+        newGame();
+      }
+});
+
+// Configured crystals to increase total counter value when clicked
+$('#crystal3').on('click', function() {
+    counter += crystalValue3;
+    $('#yourScore').text(counter);
+    
+// Display message based on win or loss
+    if (counter === targetNumber) {
+        $('#statusMessage').text(' You are a winner!');
+        newGame();
+      }
+  
+      else if (counter >= targetNumber) {
+        $('#statusMessage').text("You are a loser!");
+        newGame();
+      }  
+});
+
+// Configured crystals to increase total counter value when clicked
 $('#crystal4').on('click', function() {
     counter += crystalValue4;
     $('#yourScore').text(counter);
+
+// Display message based on win or loss
+    if (counter === targetNumber) {
+        $('#statusMessage').text(' You are a winner!');
+        newGame();
+      }
+  
+      else if (counter >= targetNumber) {
+        $('#statusMessage').text("You are a loser!");
+        newGame();
+      }
 });
 
 
@@ -102,7 +137,7 @@ $('#crystal4').on('click', function() {
 
 // var testing2 = $("#crystal2").val();
 // console.log('Testing' + testing2);
-
+ 
 // var testing3 = $("#crystal3").val();
 // console.log('Testing' + testing3);
 

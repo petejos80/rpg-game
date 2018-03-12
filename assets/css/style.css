@@ -71,3 +71,8 @@ body {
 .panel-body {
     padding: 0px;
 }
+
+.winlossmessage h1 {
+    font-size: 22px;
+    margin: 0px 0px 20px 20px;
+}
