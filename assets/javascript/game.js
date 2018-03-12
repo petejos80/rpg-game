@@ -57,17 +57,6 @@ $('#yourScore').text(counter);
 
 console.log(crystalNumberOptions);
 
-// Test - remove
-// $('#crystal1').on('click', function() {
-//     counter = counter + 
-// });
-
-// $("#crystal1, #crystal2, #crystal3, #crystal4").val(crystalNumberOptions[0,1,2,3]);
-// $('#crystal1').val(crystalNumberOptions[0]);
-// $('#crystal2').val(crystalNumberOptions[1]);
-// $('#crystal3').val(crystalNumberOptions[2]);
-// $('#crystal4').val(crystalNumberOptions[3]);
-
 // Assign crystal array value to a new variable
 var crystalValue1 = crystalNumberOptions[0];
 console.log(crystalValue1 + ' is Cystal 1"s Value');
@@ -83,52 +72,22 @@ console.log(crystalValue4 + ' is Cystal 4"s Value');
 $('#crystal1').on('click', function() {
     counter += crystalValue1;
     $('#yourScore').text(counter);
-
-// Display message based on win or loss
-    if (counter === targetNumber) {
-        $('#statusMessage').text(' You are a winner!');
-        newGame();
-      }
-  
-      else if (counter >= targetNumber) {
-        $('#statusMessage').text("You are a loser!");
-        newGame();
-      }
-});
+    winCheck();
+})
 
 // Configured crystals to increase total counter value when clicked
 $('#crystal2').on('click', function() {
     counter += crystalValue2;
     $('#yourScore').text(counter);
-
-// Display message based on win or loss
-    if (counter === targetNumber) {
-        $('#statusMessage').text(' You are a winner!');
-        newGame();
-      }
-  
-      else if (counter >= targetNumber) {
-        $('#statusMessage').text("You are a loser!");
-        newGame();
-      }
-});
+    winCheck();
+})
 
 // Configured crystals to increase total counter value when clicked
 $('#crystal3').on('click', function() {
     counter += crystalValue3;
     $('#yourScore').text(counter);
-    
-// Display message based on win or loss
-    if (counter === targetNumber) {
-        $('#statusMessage').text(' You are a winner!');
-        newGame();
-      }
-  
-      else if (counter >= targetNumber) {
-        $('#statusMessage').text("You are a loser!");
-        newGame();
-      }  
-});
+    winCheck();
+})
 
 // Configured crystals to increase total counter value when clicked
 $('#crystal4').on('click', function() {
@@ -136,52 +95,5 @@ $('#crystal4').on('click', function() {
     $('#yourScore').text(counter);
     winCheck();
 })
-
-// // Display message based on win or loss
-//     if (counter === targetNumber) {
-//         $('#statusMessage').text(' You are a winner!');
-//         newGame();
-//       }
-  
-//       else if (counter >= targetNumber) {
-//         $('#statusMessage').text("You are a loser!");
-//         newGame();
-//       }
-// });
-
-
-
-
-//Testing
-// var testing1 = $("#crystal1").val();
-// console.log('Testing' + testing1);
-
-// var testing2 = $("#crystal2").val();
-// console.log('Testing' + testing2);
- 
-// var testing3 = $("#crystal3").val();
-// console.log('Testing' + testing3);
-
-// var testing4 = $("#crystal4").val();
-// console.log('Testing' + testing4);
-
-// $('#crstal1').on('click')
-
-// console.log(crystalNumberOptions);
-
-
-
-
-
-
-
-
-
-
-// for (var i = 0; i < crystalNumberOptions.length; i++) {
-
-//     var imageJewel = $('<img>');
-
-//     }   
 
 });
