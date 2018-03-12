@@ -24,6 +24,27 @@ function newGame () {
     $('#yourScore').text(counter);
 }
 
+// Display message based on win or loss
+function winCheck () {
+if (counter === targetNumber) {
+    $('#statusMessage').text("You are a winner!");
+    counter = 0;
+    $('#yourScore').text(counter);
+    totalWins++;
+    $("#yourWins").text(totalWins);
+    console.log(totalWins);
+  }
+
+  else if (counter >= targetNumber) {
+    $('#statusMessage').text("You are a loser!");
+    counter = 0;
+    $('#yourScore').text(counter);
+    totalLosses++;
+    $("#yourLosses").text(totalLosses);
+    console.log(totalLosses);
+  }
+};
+
 // MAIN PROCESS 
 // =======================================================================================================
 
@@ -115,18 +136,20 @@ $('#crystal3').on('click', function() {
 $('#crystal4').on('click', function() {
     counter += crystalValue4;
     $('#yourScore').text(counter);
+    winCheck();
+})
 
-// Display message based on win or loss
-    if (counter === targetNumber) {
-        $('#statusMessage').text(' You are a winner!');
-        newGame();
-      }
+// // Display message based on win or loss
+//     if (counter === targetNumber) {
+//         $('#statusMessage').text(' You are a winner!');
+//         newGame();
+//       }
   
-      else if (counter >= targetNumber) {
-        $('#statusMessage').text("You are a loser!");
-        newGame();
-      }
-});
+//       else if (counter >= targetNumber) {
+//         $('#statusMessage').text("You are a loser!");
+//         newGame();
+//       }
+// });
 
 
 
