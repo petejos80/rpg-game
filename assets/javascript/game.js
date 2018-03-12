@@ -50,6 +50,7 @@ $(document).ready(function() {
       $("#yourWins").text(totalWins);
       console.log(totalWins);
       newGame();
+   
     } else if (counter >= targetNumber) {
       $("#statusMessage").text("You are a loser!");
       totalLosses++;
