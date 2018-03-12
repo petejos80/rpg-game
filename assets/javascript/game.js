@@ -24,6 +24,10 @@ function newGame () {
     $('#yourScore').text(counter);
 }
 
+function shuffleVals () {
+    crystalNumberOptions.sort(function(a, b){return 0.5 - Math.random()});
+}
+
 // Display message based on win or loss
 function winCheck () {
 if (counter === targetNumber) {
@@ -32,7 +36,6 @@ if (counter === targetNumber) {
     $('#yourScore').text(counter);
     totalWins++;
     $("#yourWins").text(totalWins);
-    console.log(totalWins);
   }
 
   else if (counter >= targetNumber) {
@@ -41,7 +44,6 @@ if (counter === targetNumber) {
     $('#yourScore').text(counter);
     totalLosses++;
     $("#yourLosses").text(totalLosses);
-    console.log(totalLosses);
   }
 };
 
