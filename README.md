@@ -1,2 +1,2 @@
 # RPG Game
-Simple RPG game built in Javascipt
+Simple RPG game built in Javascipt.
